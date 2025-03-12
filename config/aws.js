@@ -10,7 +10,7 @@ AWS.config.apiVersions = {
   s3: '2006-03-01',
 };
 
-const s3bucket = new AWS.S3({ params: { Bucket: 'recyglo-b2b' } });
+const s3bucket = new AWS.S3({ params: { Bucket: 'waste-b2b' } });
 
 module.exports = {
   s3: s3bucket,
