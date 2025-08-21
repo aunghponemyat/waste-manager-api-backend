@@ -121,7 +121,7 @@ const CREATE_USER = async (req, res) => {
     try {
       const { email, phoneNumber, organizationId } = body;
       const userType = body.type;
-      const password = 'recyglo';
+      const password = 'waste_manager';
       const emailExist = await User.find({ email });
       // const phoneNumberExist = await User.find({ phoneNumber });
 

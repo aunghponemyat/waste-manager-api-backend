@@ -1,13 +1,13 @@
-# Recyglo Dashboard API
+# Waste Manager API
 
-API service for recyglo dashboard
+API service for waste-manager dashboard
 
 ### Installation
 
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd recyglo-dashboard-api
+$ cd waste-manager-api-backend
 $ npm install -d
 $ npm run dev
 ```
@@ -15,7 +15,7 @@ $ npm run dev
 For production environments...
 
 ```sh
-$ cd recyglo-dashboard-api
+$ cd waste-manager-api-backend
 $ npm install
 $ npm run production
 ```

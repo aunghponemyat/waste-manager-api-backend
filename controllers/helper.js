@@ -14,7 +14,7 @@ AWS.config.apiVersions = {
   s3: '2006-03-01',
 };
 
-const GREET = async (req, res) => res.status(200).send('Welcome to Recyglo API');
+const GREET = async (req, res) => res.status(200).send('Welcome to Waste Manager API');
 
 const UPLOAD_TO_S3 = async (req, res) => {
   // console.log(Object.keys(req));
@@ -61,7 +61,7 @@ const UPLOAD_TO_S3 = async (req, res) => {
 
 const ENCRYPT = async (string) => {
   let cypher = null;
-  await Encryption.encrypt('weloverecyglo', string)
+  await Encryption.encrypt('managewasteingit', string)
     .then(res => cypher = res);
   return cypher;
 };
@@ -69,7 +69,8 @@ const ENCRYPT = async (string) => {
 
 const DECRYPT = async (cypher) => {
   let message = null;
-  await Encryption.decrypt('weloverecyglo', cypher)
+  // await Encryption.decrypt('weloverecyglo', cypher)
+  await Encryption.decrypt('mangewasteingit', cypher)
     .then(res => message = res);
   return message;
 };
@@ -95,13 +96,13 @@ const SEND_EMAIL = async (email) => {
 
   return new Promise((resolve,reject)=>{
 
-    message = '<html><p>We heard that you lost your RecyGlo password. Sorry about that!</p><p>But don’t worry! You can use the following link to reset your password:</p><p>https://recyglo.net/password_reset/'+cypher+'</p><p>If you don’t use this link within 3 hours, it will expire. To get a new password reset link, visit https://recyglo.net/password_reset</p></html>';
+    message = '<html><p>We heard that you lost your Waste Manager password. Sorry about that!</p><p>But don’t worry! You can use the following link to reset your password:</p><p>https://recyglo.net/password_reset/'+cypher+'</p><p>If you don’t use this link within 3 hours, it will expire. To get a new password reset link, visit https://recyglo.net/password_reset</p></html>';
     client.send(
       {
         text: 'Hello',
-        from: 'RecyGlo Support<noreply.recyglo@gmail.com>',
+        from: 'Waste Manager Support<noreply.recyglo@gmail.com>',
         to: email,
-        subject: '[RecyGlo] Please reset your password',
+        subject: '[Waste Manager] Please reset your password',
         attachment: [
           { data: message, alternative: true },
         ],

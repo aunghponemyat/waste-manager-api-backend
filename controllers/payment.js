@@ -9,13 +9,12 @@ const joi = require('joi');
 // const { ObjectId } = require('mongodb');
 const Payment = require('../models/payment');
 
-const TEST = async (req, res) => res.status(200).send('Welcome to Recyglo API');
+const TEST = async (req, res) => res.status(200).send('Welcome to Waste Manager API');
 
 const TESTPOST = async (req, res) => {
   console.log('test payment action');
   console.log(req);
-  res.redirect('https://recyglo.net/thankyou');
-  // res.status(200).send('Welcome to Recyglo API');
+  res.redirect('https://waste-manager.net/thankyou');
 };
 
 const GETPAYMENTACTION = async (req, res) => {
@@ -112,25 +111,6 @@ const CREATE_PAYMENT = async (req, res) => {
   const { error } = joi.validate(body, schema);
   if (!error) {
     try {
-      // const { email, phoneNumber, organizationId } = body;
-      // const userType = body.type;
-      // const password = 'recyglo';
-      // const emailExist = await User.find({ email });
-      // const phoneNumberExist = await User.find({ phoneNumber });
-
-      // if (emailExist && emailExist.length) {
-      //   return res.status(409).json('Email address already exist');
-      // }
-
-      // if (phoneNumberExist && phoneNumberExist.length) {
-      //   return res.status(409).json('Phone Number already exist');
-      // }
-
-      // if (userType === 3 && organizationId.length === 0) {
-      //   // no need to check type using ===
-      //   return res.status(406).json('User must have an organization');
-      // }
-
       const newPayment = new Payment(req.body);
       await newPayment.save();
 

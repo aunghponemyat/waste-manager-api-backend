@@ -7,7 +7,7 @@ const JwtStrategy = require('passport-jwt').Strategy;
 const { ExtractJwt } = require('passport-jwt');
 const User = require('../models/user');
 
-const jwtSecret = process.env.SECRET || 'RecygloMyanmar';
+const jwtSecret = process.env.SECRET || 'WasteManager';
 
 module.exports = function (passport) {
   passport.use(

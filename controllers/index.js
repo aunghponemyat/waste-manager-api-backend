@@ -8,7 +8,7 @@ const User = require('../models/user');
 const Logistics = require('../models/logistics');
 const Training = require('../models/training');
 
-const GREET = async (req, res) => res.status(200).send('Welcome to Recyglo API');
+const GREET = async (req, res) => res.status(200).send('Welcome to Waste Manager API');
 
 const GET_DASHBOARD_DATA = async (req, res) => {
   try {
@@ -637,7 +637,7 @@ const UPLOAD_TO_S3 = async (req, res) => {
   if (!res.files) {
     return res.status(500).send('Please upload file in form-data.');
   }
-  return res.status(200).send('Welcome to Recyglo API');
+  return res.status(200).send('Welcome to Waste Manager API');
 };
 
 module.exports = {

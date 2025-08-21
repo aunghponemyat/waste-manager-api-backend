@@ -1,7 +1,7 @@
 {
-  "name": "recyglo-dashboard-api",
+  "name": "waste-manager-api-backend",
   "version": "1.0.0",
-  "description": "API service for recyglo dashboard",
+  "description": "API service for waste-manager dashboard",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/saiaungpyae/recyglo-dashboard-api.git"
+    "url": "git+https://github.com/aunghponemyat/waste-manager-api-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/saiaungpyae/recyglo-dashboard-api/issues"
+    "url": "https://github.com/aunghponemyat/waste-manager-api-backend/issues"
   },
-  "homepage": "https://gitlab.com/saiaungpyae/recyglo-dashboard-api#readme",
+  "homepage": "https://github.com/aunghponemyat/waste-manager-api-backend#readme",
   "dependencies": {
     "accesscontrol": "^2.2.1",
     "async": "^2.6.1",
